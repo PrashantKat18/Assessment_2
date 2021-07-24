@@ -1,0 +1,17 @@
+nav ul li  a {
+    color: #222222;
+    transition: 0.3s;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  h6{
+    font-size: 11px;
+  }
+
+  button{
+    margin: 0px;
+    height: 35px;
+    color: #fff;
+  }

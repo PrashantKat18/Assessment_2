@@ -1,0 +1,21 @@
+<!-- <p style="margin-top: 200px;"> -->
+  gallery works!
+  <table style="margin-top: 200px;">
+    <tbody>
+        <tr *ngFor="let item of students; let i =index; trackBy:identify">
+            <td>
+                {{item.studeid}}
+            </td>
+            <td>
+                {{item.name}}
+            </td>
+            <td>
+                {{item.gender}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<button (click)="getMoreStudent()">Click </button>
+<!-- </p> -->
+
