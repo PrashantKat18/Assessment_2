@@ -1,8 +1,5 @@
-export const constants = {
-    usersDb : {
-        "status" : 200,
-        "error" : "",
-        data : [
+export const CONSTANTS = {
+    usersDb : [
                 {
                 "user_id" : "abc@media.com",
                 "password" : "abc123",
@@ -12,7 +9,5 @@ export const constants = {
                     "user_id" : "def@media.com",
                     "password" : "def123",
                     "user_name" : "dick"
-                }
-        ]
-    }  
-} 
+                }]
+            }

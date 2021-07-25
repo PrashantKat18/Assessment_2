@@ -9,7 +9,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
-// import { MatButtonModule, MatDialogModule, MatExpansionModule } from '@angular/material';
+import { LoginComponent } from './modal/login/login.component';
+import { Message1Component } from './modal/message1/message1.component';
+import { GalleryImgComponent } from './modal/gallery-img/gallery-img.component';
 
 
 
@@ -18,7 +20,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MessageComponent
+    MessageComponent,
+    LoginComponent,
+    Message1Component,
+    GalleryImgComponent,
   ],
   imports: [
     BrowserModule,

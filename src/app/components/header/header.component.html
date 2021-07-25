@@ -1,4 +1,3 @@
-
 <div id="topbar" class="d-none d-lg-flex p-4 align-items-center fixed-top">
     <div class="container d-flex">
         <div class="contact-info mr-auto pt-2">
@@ -8,18 +7,21 @@
         <div class="contact-info ml-auto pt-2 h6">
             <i class="fa fa-phone" aria-hidden="true"></i> +91 8840091275 &nbsp;
             <a href="https://www.linkedin.com/in/prashant-katiyar-259378177/"><i class="fa fa-linkedin-square"
-          aria-hidden="true"></i></a> &nbsp;
+                    aria-hidden="true"></i></a> &nbsp;
             <a href="https://twitter.com/Prashan06902633"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
         </div>
         <div class="social-links">
             <i style="background-color: aliceblue;" styclass="icofont-twitter"></i>
         </div>&nbsp;
-        <!-- <div class="pt-2 pr-2 pl-2 text-warning h6">{{this.addProvider.userName}}</div> -->
-        <div >
-            <button type="button" class="btn btn-outline-primary" (click)="login()">Sign In</button>
+        <div class="pt-2 pr-2 pl-2 text-warning h6" *ngIf="this.authService.isLogin">{{this.authService.user_name}}
         </div>
-        <div >
-            <button type="button" class="btn btn-outline-primary" (click)="logout()">logout</button>
+        <div>
+            <button type="button" class="btn btn-outline-primary" *ngIf="!this.authService.isLogin"
+                (click)="login()">Sign In</button>
+        </div>
+        <div>
+            <button type="button" class="btn btn-outline-primary" *ngIf="this.authService.isLogin"
+                (click)="logout()">logout</button>
         </div>
     </div>
 </div>
@@ -29,24 +31,34 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light pt-0 pb-0 ">
             <h1 class="navbar-brand logo">Prashant <span>Kat</span></h1>
-            <button  class="navbar-toggler" type="button" (click)="toggleNavbar()">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-            <div class="collapse navbar-collapse show" id="navbarSupportedContent"  [ngClass]="{ 'show': navbarOpen }">
-                <ul class="navbar-nav ml-auto" >
+            <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse show" id="navbarSupportedContent" [ngClass]="{ 'show': navbarOpen }">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item " (click)="toggleNavbar()">
-                        <a class="nav-link pr-4" routerLink="home" >HOME</a>
+                        <a class="nav-link pr-4" routerLink="home">HOME</a>
                     </li>
                     <li class="nav-item active" (click)="toggleNavbar()">
                         <a class="nav-link pr-4" routerLink="/aboutus">ABOUT US</a>
                     </li>
-                    <li class="nav-item " (click)="toggleNavbar()"> 
+                    <li class="nav-item " (click)="toggleNavbar()">
                         <a class="nav-link pr-4" routerLink="gallery">GALLERY</a>
                     </li>
-                    <li class="nav-item" (click)="toggleNavbar()"> 
-                        <a class="nav-link pr-4" routerLink="contactus">CONTACT US</a>
-                    </li>
                 </ul>
+                <div class="d-sm-block d-lg-none d-md-none">
+                <div class="pt-2 pr-2 pl-2 text-warning h6" *ngIf="this.authService.isLogin">{{this.authService.user_name}}
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline-primary" *ngIf="!this.authService.isLogin"
+                        (click)="login()"><span class="text-dark">Sign In</span></button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline-primary" *ngIf="this.authService.isLogin"
+                        (click)="logout()"><span class="text-dark">logout</span></button>
+                </div>
+                </div>
+                
             </div>
         </nav>
     </div>

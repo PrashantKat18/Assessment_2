@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import * as AOS from 'aos';
+import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,7 +15,10 @@ export class HomeComponent implements OnInit {
   viewType = 7;
   leftCurly = '{';
   rightCurly = '}';
-  constructor() { 
+  searchValue:any;
+  // search:string = ""
+  // searchKeywords: string | undefined;
+  constructor(public authService:AuthService) { 
   }
 
   ngOnInit(): void {
@@ -55,5 +58,10 @@ export class HomeComponent implements OnInit {
     this.viewType = i;
   }
 
+  getSearchValue(search:string){
+   this.authService.getSearch(search).subscribe((result)=>{
+     this.searchValue = result;
+   })
+  }
 
 }

@@ -13,7 +13,7 @@
     <div class="container ">
         <div class="row ">
             <div class="col-md-3  d-none d-lg-block" data-aos="fade-right" >
-                <h3>Download Resume </h3>
+                <h2>Download Resume </h2>
             </div>
             <div class="ml-auto  d-none d-lg-block" data-aos="fade-left" >
                 <a href="../../../assets/Prashant.pdf" download>
@@ -43,7 +43,7 @@
                     <div>
                         <div>
                             <h2>HELLO, I'M PRASHANT KATIYAR</h2>
-                            <h5>Full Stack Developer | Immediate Joiner </h5>
+                            <h3>Full Stack Developer | Immediate Joiner </h3>
                         </div>
                         <div>
                             <p class="pt-2">Hard working and enthusiastic. Love to learn and keep updated with the latest technologies in the market especially new programming languages and platforms. Passionate coder and specially interested in Web Development technologies.
@@ -192,21 +192,6 @@
                             <li class="nav-item " [ngClass]="(this.viewType == 2) ? 'selectedView' : 'unSelectedView'" (click)=changeView(2)>
                             Java Script
                             </li>
-                            <!-- <li class="nav-item " [ngClass]="(this.viewType == 3) ? 'selectedView' : 'unSelectedView'" (click)=changeView(3)>
-                            Html 5
-                            </li>
-                            <li class="nav-item " [ngClass]="(this.viewType == 4) ? 'selectedView' : 'unSelectedView'" (click)=changeView(4)>
-                            Css 3
-                            </li>
-                            <li class="nav-item " [ngClass]="(this.viewType == 5) ? 'selectedView' : 'unSelectedView'" (click)=changeView(5)>
-                            Bootstrap 4,5
-                            </li>
-                            <li class="nav-item " [ngClass]="(this.viewType == 6) ? 'selectedView' : 'unSelectedView'" (click)=changeView(6)>
-                            Chart js
-                            </li>
-                            <li class="nav-item " [ngClass]="(this.viewType == 6) ? 'selectedView' : 'unSelectedView'" (click)=changeView(6)>
-                            Mysql
-                            </li> -->
                         
                         </ul>
                         </div>
@@ -297,14 +282,14 @@
                     <div class="col-md-3 col-sm-12 py-1" data-aos="fade-up">
                         <div class="card_mrgin" > 
                             <div class="card tab-code-content">
-                                <div class="card-header text-center">
+                                <div class="card-header text-center nav-item py-3">
                                 Other Skills
                                 </div>
                                 <div class="card-body text-center" >
-                                <div class="yellow py-2"> Github</div>
-                                <div class="py-2"> Ubntu </div>
-                                <div class="yellow py-2"> Windows </div>
-                                <div class="py-2"> Ms office</div>
+                                <div class="yellow py-2 nav-item "> Github</div>
+                                <div class="py-2 nav-item "> Ubntu </div>
+                                <div class="yellow py-2 nav-item "> Windows </div>
+                                <div class="py-2 nav-item "> Ms office</div>
                                 </div>
                             </div>
                     </div>
@@ -312,190 +297,22 @@
                 </div>
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-md-6 col-sm-6 item py-1 " data-aos="fade-up" >
-                    <div class="card item-card card-block">
-                        <div class="pk_card py-4">Technical Skills</div>
-                        <p class="card-text text-center pt-3">Angular, Node js ,Mysql ,Sql ,Java Script ,Chart js, Json, Bootstrap 4 ,Css3 ,Html5</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 item py-1" data-aos="fade-up" >
-                    <div class="card item-card card-block">
-                        <div class="pk_card py-4">Other Skills</div>
-                        <p class="card-text text-center pt-3">Git,Ubntu,Windows,Ms office</p>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </section>
 
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                        <div class="mainflip">
-                            <div class="frontside">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <p>
-                                            <img class="img-fluid" src="../../../assets/img/img/projectImage/tms.png" alt="card image">
-                                        </p>
-                                        <h4 class="card-title">TMS</h4>
-                                        <p class="card-text">Temperature Monitoring System</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="backside">
-                                <div class="card">
-                                    <div class="card-body text-center mt-4">
-                                        <h4 class="card-title">TMS</h4>
-                                        <p class="card-text">This project is used to check the temperature of person and show in the dashboards.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- for task -->
+    <!-- <div class="container">
+        <div class="form-group mt-5">
+        <input type="text" [(ngModel)]="search" (keyup)="getSearchValue(search)" placeholder="search">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" >
+        </textarea>
+        <div >Aman</div>
 
-                <div class="col-md-4">
-                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                        <div class="mainflip">
-                            <div class="frontside">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <p>
-                                            <img class="img-fluid" src="../../../assets/img/img/projectImage/tms-fr.png" alt="card image">
-                                        </p>
-                                        <h4 class="card-title">TMS-FR</h4>
-                                        <p class="card-text">Temperature Monitoring System - Face Recoganize</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="backside">
-                                <div class="card">
-                                    <div class="card-body text-center mt-4">
-                                        <h4 class="card-title">TMS-FR</h4>
-                                        <p class="card-text">Temperature Monitoring System Face Recoganize is AI based web application So According to this Application we can recoganize individual tempreature of a person.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                        <div class="mainflip">
-                            <div class="frontside">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <p>
-                                            <img class="img-fluid" src="../../../assets/img/img/projectImage/pws.png" alt="card image">
-                                        </p>
-                                        <h4 class="card-title">PWS</h4>
-                                        <p class="card-text">Perimeter Watch System</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="backside">
-                                <div class="card">
-                                    <div class="card-body text-center mt-4">
-                                        <h4 class="card-title">PWS</h4>
-                                        <p class="card-text">Perimeter Watch System is AI based web application So According to this Application we can track object within particular area .
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                        <div class="mainflip">
-                            <div class="frontside">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <p>
-                                            <img class="img-fluid" src="../../../assets/img/img/projectImage/hcms.png" alt="card image">
-                                        </p>
-                                        <h4 class="card-title">AMS</h4>
-                                        <p class="card-text">Attendance Management System</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="backside">
-                                <div class="card">
-                                    <div class="card-body text-center mt-4">
-                                        <h4 class="card-title">AMS</h4>
-                                        <p class="card-text">Attendance management system is AI based web application So According to this application we can recoganize employee entry and exit time and also record.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                        <div class="mainflip">
-                            <div class="frontside">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <p>
-                                            <img class="img-fluid" src="../../../assets/img/img/projectImage/sms.png" alt="card image">
-                                        </p>
-                                        <h4 class="card-title">SMS</h4>
-                                        <p class="card-text">Showroom Management System</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="backside">
-                                <div class="card">
-                                    <div class="card-body text-center mt-4">
-                                        <h4 class="card-title">SMS</h4>
-                                        <p class="card-text">Showroom Management System is an application which is only for the customer.According to this application customer check all details particular vehicle.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                        <div class="mainflip">
-                            <div class="frontside">
-                                <div class="card">
-                                    <div class="card-body text-center">
-                                        <p>
-                                            <img class="img-fluid" src="../../../assets/img/img/projectImage/hcms.png" alt="card image">
-                                        </p>
-                                        <h4 class="card-title">HCMS</h4>
-                                        <p class="card-text">Health Care Management System</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="backside">
-                                <div class="card">
-                                    <div class="card-body text-center mt-4">
-                                        <h4 class="card-title">HCMS</h4>
-                                        <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div> -->
 
     <!-- ======= Contact Section ======= -->
-    <section class="contact section-bg">
+    <section class="contact">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
                 <h2> Contact</h2>
@@ -530,11 +347,8 @@
 
     
 
-      <!--Scroll to top-->
-  <div class="for_scroll_button">
-      <div [ngClass]="{'show-scroll': showScroll}" (click)="scrollToTop()" class="scroll-to-top">
-      <i class="fa fa-arrow-up"  style="font-size: 18px;" aria-hidden="true"></i>
-     </div>
- </div>
+    <div [ngClass]="{'show-scroll': showScroll}" (click)="scrollToTop()" class="scroll-to-top">
+        <i class="fa fa-arrow-up"  style="font-size: 18px;" aria-hidden="true"></i>
+       </div>
 
 </main>

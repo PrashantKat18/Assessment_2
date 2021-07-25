@@ -56,7 +56,6 @@
 
 
     .card_mrgin {
-        background-color: #2a2734;
         color: #fff;
         /* // border-radius: 10px; */
         border: none;
@@ -93,5 +92,6 @@
         font-family: "Roboto", sans-serif;
         line-height: 1.4;
       }
-    /* } */
-  /* } */
+
+
+  

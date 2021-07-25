@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthenticationGuard } from './guards/authentication.guard';
 
 const routes: Routes = [
   {
@@ -11,13 +12,12 @@ const routes: Routes = [
     loadChildren: () => import('./components/about/about.module').then(m => m.AboutModule)
   },
   {
-    path: 'contactus',
-    loadChildren: () => import('./components/contact/contact.module').then(m => m.ContactModule)
+    path:'gallery', 
+    canActivate:[AuthenticationGuard],
+    loadChildren: () => import('./components/gallery/gallery.module').then(m => m.GalleryModule)
   },
   {
-    path:'gallery', 
-    // canActivateChild:[ActivatechildguardGuard],
-    loadChildren: () => import('./components/gallery/gallery.module').then(m => m.GalleryModule)
+    path:'', redirectTo: '/home', pathMatch: 'full'
   },
 
 ];

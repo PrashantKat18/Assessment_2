@@ -15,6 +15,11 @@ body {
   h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto", sans-serif;
   }
+
+  p {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+  }
   
 
   #preloader {
@@ -2059,25 +2064,9 @@ body {
   /* // font-weight: bold; */
 }
   
-/* // scroll button */
-
-/* .for_scroll_button {  
-div{
-  padding: 15px;
-  background: #e7f1fd;
-  color: #106eea;
-  border: none;
-  cursor: pointer;
-  border-radius: 50%
-}
-div:hover{
-  background: #106eea;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-}
 
 .scroll-to-top {
+    cursor: pointer;
     position: fixed;
     bottom: 15px;
     right: 15px;
@@ -2087,7 +2076,7 @@ div:hover{
 
 .show-scroll {
     opacity: 1;
-} */
+} 
 
   
 html, body { height: 100%; }

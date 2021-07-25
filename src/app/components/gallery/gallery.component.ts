@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { GalleryImgComponent } from 'src/app/modal/gallery-img/gallery-img.component';
 
 @Component({
   selector: 'app-gallery',
@@ -7,56 +9,50 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
   students:any
-  constructor() {
-    this.students = [
-     {
-       studeid:1,
-       name:"prashant",
-       gender:"male",
-     },
-     {
-      studeid:2,
-      name:"shivam",
-      gender:"male",
-    },
-    {
-      studeid:3,
-      name:"prashant kat",
-      gender:"male",
-    }
-    ]
+  constructor(public dialog: MatDialog) {
    }
 
   ngOnInit(): void {
   }
 
-  identify(index:any, item:any){
-    return item.i; 
- }
-
-  getMoreStudent() :void{
-    this.students = [
-      {
-        studeid:1,
-        name:"prashant",
-        gender:"male",
-      },
-      {
-       studeid:2,
-       name:"shivam",
-       gender:"male",
-     },
-     {
-       studeid:3,
-       name:"prashant kat",
-       gender:"male",
-     },
-     {
-      studeid:4,
-      name:"debika",
-      gender:"female",
-    }
-     ]
+  showImg(img: any){
+    console.log(img);
+    this.dialog.open(GalleryImgComponent, {
+      // width: '500px',
+      data: img
+    });
+    
   }
+
+  images = [
+    {
+      "clgImg" : "../../../assets/clg1.jpeg"
+    },
+    {
+      "clgImg" : "../../../assets/clg2.jpeg"
+    },
+    {
+      "clgImg" : "../../../assets/clg3.jpeg"
+    },
+    {
+      "clgImg" : "../../../assets/clg4.jpeg"
+    },
+    {
+      "clgImg" : "../../../assets/clg1.jpeg"
+    },
+    {
+      "clgImg" : "../../../assets/clg2.jpeg"
+    },
+    {
+      "clgImg" : "../../../assets/clg3.jpeg"
+    },
+    {
+      "clgImg" : "../../../assets/clg2.jpeg"
+    },
+    {
+      "clgImg" : "../../../assets/clg3.jpeg"
+    }
+  ]
+
 
 }

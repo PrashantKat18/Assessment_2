@@ -1,38 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { LoginComponent } from 'src/app/modal/login/login.component';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
+
 export class HeaderComponent implements OnInit {
   navbarOpen : boolean = false;
-
-  constructor(public dialog: MatDialog,private router: Router) { }
+  loginDetails:any
+  constructor(public dialog: MatDialog,public authService:AuthService,private router: Router) { 
+  }
 
   ngOnInit(): void {
   }
 
   logout() {
-    // this.addProvider.logout();
-    // this.router.navigate(['/home']);
+    this.authService.logout().subscribe((result:any)=>{
+      console.log(result);
+        this.router.navigate(['/home']);
+    })
   }
 
-  // login(){
-  //     const dialogRef = this.dialog.open(LoginComponent);
-  //     dialogRef.afterClosed().subscribe(result => {
-  //       console.log(`Dialog result: ${result}`);
-  //     });
-  //   }
-
   login() {
-    const dialogRef = this.dialog.open(LoginComponent);
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log(`Dialog result: ${result}`);
-    // });
+    this.dialog.open(LoginComponent, {
+      width: '500px',
+    });
   }
 
   toggleNavbar() {
